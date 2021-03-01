@@ -1,0 +1,13 @@
+C:\Users\dev\source\repos\ConsoleApp1\class intro\bin\Debug\netcoreapp3.1\class intro.exe
+C:\Users\dev\source\repos\ConsoleApp1\class intro\bin\Debug\netcoreapp3.1\class intro.deps.json
+C:\Users\dev\source\repos\ConsoleApp1\class intro\bin\Debug\netcoreapp3.1\class intro.runtimeconfig.json
+C:\Users\dev\source\repos\ConsoleApp1\class intro\bin\Debug\netcoreapp3.1\class intro.runtimeconfig.dev.json
+C:\Users\dev\source\repos\ConsoleApp1\class intro\bin\Debug\netcoreapp3.1\class intro.dll
+C:\Users\dev\source\repos\ConsoleApp1\class intro\bin\Debug\netcoreapp3.1\class intro.pdb
+C:\Users\dev\source\repos\ConsoleApp1\class intro\obj\Debug\netcoreapp3.1\class intro.csprojAssemblyReference.cache
+C:\Users\dev\source\repos\ConsoleApp1\class intro\obj\Debug\netcoreapp3.1\class intro.AssemblyInfoInputs.cache
+C:\Users\dev\source\repos\ConsoleApp1\class intro\obj\Debug\netcoreapp3.1\class intro.AssemblyInfo.cs
+C:\Users\dev\source\repos\ConsoleApp1\class intro\obj\Debug\netcoreapp3.1\class intro.csproj.CoreCompileInputs.cache
+C:\Users\dev\source\repos\ConsoleApp1\class intro\obj\Debug\netcoreapp3.1\class intro.dll
+C:\Users\dev\source\repos\ConsoleApp1\class intro\obj\Debug\netcoreapp3.1\class intro.pdb
+C:\Users\dev\source\repos\ConsoleApp1\class intro\obj\Debug\netcoreapp3.1\class intro.genruntimeconfig.cache
