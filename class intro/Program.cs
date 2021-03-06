@@ -20,15 +20,12 @@ namespace class_intro
     //        return $"Number: {number}";
     //    }
     //}
-
-    class ATM 
+    class CreditCard
     {
-        private string id;
         private string password;
         private double balance;
-        public ATM(string id, string pass, double balance)
+        public CreditCard(string pass, double balance)
         {
-            this.id = id;
             this.password = pass;
             this.balance = balance;
         }
@@ -36,10 +33,7 @@ namespace class_intro
         {
             return password;
         }
-        public string getID()
-        {
-            return id;
-        }
+
         public void ShowBalance()
         {
             Console.WriteLine($"Balance: {balance}");
@@ -55,6 +49,32 @@ namespace class_intro
             else
                 balance -= withdrawMoney;
         }
+    }
+
+    class ATM 
+    {
+        private string id;
+        private string password;
+        public ATM(string id, string pass)
+        {
+            this.id = id;
+            this.password = pass;
+        }
+        public string GetPassword()
+        {
+            return password;
+        }
+        public string GetId()
+        {
+            return id;
+        }
+        public bool Enter(CreditCard card, string id)
+        {
+            if (card.getPassword() == password&& this.id==id)
+                return true;
+            return false;
+        }
+                
         public void menu()
         {
             Console.WriteLine("1. Show balance");
@@ -72,14 +92,20 @@ namespace class_intro
             //Number num = new Number(12);
             //Console.WriteLine(num);
             int choose = 0;
-            string pass, id;
+            string pass="", id;
+            CreditCard card = new CreditCard("6000", 10000);
 
-            ATM atm = new ATM("1002", "6000", 3500);
+            ATM atm = new ATM("1002", "6000");
             Console.Write("Enter id: ");
             id = Console.ReadLine();
-            Console.Write("Enter password: ");
-            pass = Console.ReadLine();
-            if (pass == atm.getPassword() && id == atm.getID())
+            Console.Write("Do you have credit card: 1-yes 0-no: ");
+            choose = int.Parse(Console.ReadLine());
+            if (choose == 0)
+            {
+                Console.Write("Enter password: ");
+                pass = Console.ReadLine();
+            }
+            if (atm.Enter(card,id)|| id==atm.GetId() && pass==atm.GetPassword())
             {
                 while (choose != 4)
                 {
@@ -89,17 +115,17 @@ namespace class_intro
                     switch (choose)
                     {
                         case 1:
-                            atm.ShowBalance();
+                            card.ShowBalance();
                             break;
                         case 2:
                             Console.Write("Enter money: ");
                             money = double.Parse(Console.ReadLine());
-                            atm.AddMoney(money);
+                            card.AddMoney(money);
                             break;
                         case 3:
                             Console.Write("Enter money: ");
                             money = double.Parse(Console.ReadLine());
-                            atm.Withdraw(money);
+                            card.Withdraw(money);
                             break;
                         case 4:
                             Console.WriteLine("Goodbye!!");
@@ -114,7 +140,8 @@ namespace class_intro
             }
             else
             {
-                Console.WriteLine("Error id or password!!");            }
+                Console.WriteLine("Error id or password!!");
+            }
 
         }
     }
